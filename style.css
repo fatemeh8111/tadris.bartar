@@ -159,7 +159,7 @@ header {
 
 /* فونت نستعلیق و انیمیشن */
 header h1 {
-    font-family: 'B Titr', sans-serif;
+    font-family: 'IranNastaliq', sans-serif;
     font-size: 120px;
     opacity: 0;
     animation: fadeIn 3s forwards;
