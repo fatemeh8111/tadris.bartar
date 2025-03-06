@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام و ارسال اثر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ثبت‌ نام </h1>
+    </header>
+    <main>
+        <form id="uploadForm">
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" required>
+
+            <label for="file">آپلود اثر (حداکثر ۳۰MB):</label>
+            <input type="file" id="file" accept=".pdf,.mp4,.mp3,.zip" required>
+            
+            <button type="submit">ارسال</button>
+        </form>
+        <p id="message"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

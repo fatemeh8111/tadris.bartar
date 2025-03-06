@@ -1,0 +1,296 @@
+/* تنظیمات کلی برای نمایش صحیح صفحه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'B Nazanin', sans-serif;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* استایل هدر */
+header {
+    background: #09716a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-family: 'Baran', sans-serif;
+}
+
+/* استایل منو */
+nav {
+    background: #0b1d3100;
+    padding: 10px;
+    text-align: center;
+    font-family: 'B Nazanin', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* نمایش آیتم‌ها به‌صورت افقی */
+    justify-content: center; /* وسط‌چین کردن منو */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* تنظیمات محتوای صفحه */
+main {
+    flex: 1; /* بخش اصلی صفحه را گسترده می‌کند */
+    padding: 20px;
+    text-align: center;
+}
+
+/* استایل دکمه‌ها */
+button {
+    background: rgb(25, 114, 3);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: darkred;
+}
+/* تنظیمات کلی برای کل صفحه */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* حداقل ارتفاع صفحه برابر با کل صفحه نمایش */
+    margin: 0;
+}
+
+/* محتوای اصلی را گسترش بده تا فوتر همیشه در پایین باشد */
+main {
+    flex: 1;
+}
+
+/* استایل فوتر */
+footer {
+    background-color: #09716a; /* رنگ سبز */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* تنظیمات برای اطلاعات تماس */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 12px;
+}
+/* استایل برای اطلاعات تماس */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.main-text {
+    text-align: center; /* وسط‌چین کردن متن */
+    display: block;
+    margin: 20px auto; /* ایجاد فاصله از بالا و مرکز چین کردن */
+    font-size: 22px; /* تنظیم اندازه فونت */
+    direction: rtl; /* تنظیم جهت متن برای فارسی */
+    
+}
+.about-text {
+    text-align: center; /* وسط‌چین کردن متن */
+    display: block;
+    margin: 20px auto; /* ایجاد فاصله از بالا و پایین و قرار دادن در مرکز */
+    font-size: 22px; /* اندازه فونت */
+    direction: rtl; /* راست‌چین کردن متن */
+    max-width: 80%; /* عرض حداکثری برای خوانایی بهتر */
+}
+/* استایل هدر */
+header {
+    background-color: #09716a;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* فونت نستعلیق و انیمیشن */
+header h1 {
+    font-family: 'IranNastaliq', sans-serif;
+    font-size: 120px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+/* تعریف انیمیشن */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.download-btn {
+    display: inline-block;
+    background-color: #09716a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'B Nazanin', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #075b54;
+}
+.swiper-slide img {
+    width: 100%;
+    max-width: 800px; /* حداکثر عرض */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+nav ul li {
+    list-style: none;
+    margin: 5px;
+}
+.download-btn {
+    display: inline-block;
+    background-color: #c23519;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+.download-btn:hover {
+    background-color: #218838;
+}
+.main-text {
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+    padding: 20px; /* ایجاد فاصله داخلی برای زیباتر شدن */
+    border: 2px solid #007bff; /* حاشیه آبی */
+    border-radius: 10px; /* گرد کردن گوشه‌ها */
+    background-color: #f8f9fa; /* پس‌زمینه ملایم */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
+}
+@keyframes reveal {
+    from {
+        clip-path: inset(0 0 0 100%);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.header img {
+    animation: reveal 3s ease-out forwards;
+}
+.header img {
+    width: 1000px; /* یا مقدار دلخواه مثل 300px */
+    max-width: 300px; /* حداکثر اندازه */
+    height: 250px; /* حفظ نسبت ابعاد */
+
+    display: block;
+    margin: 0 auto; /* برای وسط‌چین کردن */
+}
+p {
+    margin-bottom: 10px; /* فاصله پایین هر پاراگراف */
+}
+.container {
+    display: flex;
+    justify-content: center; /* وسط‌چین کردن */
+    gap: 20px; /* فاصله بین مستطیل‌ها */
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #f5f5f5; /* رنگ پس‌زمینه */
+    border: 2px solid #000; /* حاشیه */
+    padding: 15px 30px; /* فاصله داخلی */
+    text-align: center; /* متن وسط */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px; /* گوشه‌های گرد */
+    min-width: 200px; /* عرض حداقل */
+}
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.box {
+    background: linear-gradient(45deg, #84d8e0, #fad0c4, #ccf892, #86d97d);
+    background-size: 400% 400%;
+    animation: gradient-animation 6s ease infinite;
+    
+    border: 2px solid #000;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    min-width: 200px;
+    color: #333; /* رنگ متن */
+}
+
