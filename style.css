@@ -109,7 +109,7 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
 }
 
@@ -159,7 +159,7 @@ header {
 
 /* فونت نستعلیق و انیمیشن */
 header h1 {
-    font-family: 'IranNastaliq', sans-serif;
+    font-family: 'B Titr', sans-serif;
     font-size: 120px;
     opacity: 0;
     animation: fadeIn 3s forwards;
