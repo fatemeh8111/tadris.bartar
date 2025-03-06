@@ -415,12 +415,7 @@ p {
     display: flex;
     flex-wrap: wrap;
   }
-  nav {
-    background: #333;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-}
+
 
 nav ul {
     list-style: none;
