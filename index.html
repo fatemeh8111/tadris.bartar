@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/iran-nastaliq@master/iran-nastaliq.css" rel="stylesheet" type="text/css">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    
     <header>
         <div class="header">
             <img src="image/rrr.png" alt="تاپی.گراف">
         </div>
+        <div class="butterfly-container">
+            <img src="image/r1.png" class="butterfly">
+            <img src="image/r2.png" class="butterfly">
+            <img src="image/r3.png" class="butterfly">
+        </div>
+        <div class="butterfly-container"></div>
+    
         <nav>
             <ul>
                 <li><a href="index.html">صفحه اصلی</a></li>
@@ -46,16 +55,24 @@
             <div class="slider-container">
                 <br>
                 <br>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="image/image.jpg" alt="پوستر 1"></div>
-                        <div class="swiper-slide"><img src="image/poster2.jpg" alt="پوستر 2"></div>
-                        <div class="swiper-slide"><img src="images/info1.jpg" alt="اطلاعیه 1"></div>
-                        <div class="swiper-slide"><img src="images/info2.jpg" alt="اطلاعیه 2"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
+              <!-- لینک‌های Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- اسلایدر -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/image.jpg" alt="پوستر 1"></div>
+        <div class="swiper-slide"><img src="image/poster2.jpg" alt="پوستر 2"></div>
+        <div class="swiper-slide"><img src="images/info1.jpg" alt="اطلاعیه 1"></div>
+        <div class="swiper-slide"><img src="images/info2.jpg" alt="اطلاعیه 2"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- اسکریپت Swiper -->
+<script src="script.js"></script>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
