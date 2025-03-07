@@ -109,7 +109,7 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    font-size: 12px;
+    font-size: 14px;
     width: 100%;
 }
 
@@ -117,11 +117,12 @@ footer {
 .footer-container {
     max-width: 1200px;
     margin: auto;
+    font-size: 14px;
 }
 
 .contact-info {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 /* استایل برای اطلاعات تماس */
 .footer-container {
@@ -131,7 +132,7 @@ footer {
 
 .contact-info {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 14px;
 }
 .main-text {
     text-align: center; /* وسط‌چین کردن متن */
