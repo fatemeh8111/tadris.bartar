@@ -24,61 +24,48 @@ header {
     font-family: 'Baran', sans-serif;
 }
 
+/* استایل منو */
 nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: right;
+    background: #0b1d3100;
+    padding: 1px;
+    text-align: center;
+    font-family: 'B Nazanin', sans-serif;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-#menu {
-    list-style: none;
+nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    display: flex; /* نمایش آیتم‌ها به‌صورت افقی */
+    justify-content: center; /* وسط‌چین کردن منو */
 }
 
-#menu li {
-    margin: 0 10px;
+nav ul li {
+    margin: 0 15px;
 }
 
-#menu li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 15px;
+    display: block;
 }
 
-/* تنظیمات برای موبایل */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    
-    #menu {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-    }
-    
-    #menu li {
-        margin: 10px 0;
-    }
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
 
-    #menu.show {
-        display: flex;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* تنظیمات محتوای صفحه */
