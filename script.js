@@ -52,5 +52,19 @@ function toggleMenu() {
         menu.style.display = "block";
     }
 }
+document.getElementById("registerForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // جلوگیری از رفرش شدن صفحه
 
+    let googleScriptUrl = "https://script.google.com/macros/s/AKfycbwTDoJB8fOtgET819IaAw1yNeN-IY2X5f1Xy5JlYcYXT6u_zEm10gwtL65CDMn3IF70gQ/exec"; // آدرس اسکریپت منتشر شده
+    let formData = new FormData(this); // اطلاعات فرم را می‌گیرد
 
+    await fetch(googleScriptUrl, {
+        method: "POST",
+        body: formData
+    }).then(response => response.text())
+    .then(data => {
+        alert("اطلاعات شما ثبت شد!"); 
+    }).catch(error => {
+        alert("مشکلی پیش آمد، دوباره تلاش کنید.");
+    });
+});

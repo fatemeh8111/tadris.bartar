@@ -11,21 +11,77 @@
         <div class="header">
             <img src="image/sabtenam.png" alt="تاپی.گراف">
         </div>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="info.html">معرفی رویداد</a></li>
+                <li><a href="upload.html">ثبت‌ نام و ارسال آثار</a></li>
+                <li><a href="judges.html">هیئت داوران</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+            </ul>
+        </nav>
+        </nav>
     </header>
+    <br>
+    <p class="center">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود💡</p>
+    <p class="center">دانشجویان دختر درحال تحصیل مجاز به شرکت در این رویداد می‌باشند💡</p>
+    <p class="center">هر شرکت کننده در هرمحور 1 اثر میتواند ارسال کند💡</p>
+    <p class="center">فایل ارسالی باید حاوی عکس کارت دانشجویی/💡</p>
+
+
+
     <main>
         <form id="uploadForm">
-            <label for="name">نام و نام خانوادگی:</label>
-            <input type="text" id="name" required>
+                <label>نام و نام خانوادگی:</label>
+                <input type="text" name="fullName" required><br>
             
-            <label for="email">ایمیل:</label>
-            <input type="email" id="email" required>
-
-            <label for="file">آپلود اثر (حداکثر ۳۰MB):</label>
-            <input type="file" id="file" accept=".pdf,.mp4,.mp3,.zip" required>
+                <label>نام پدر:</label>
+                <input type="text" name="fatherName" required><br>
             
-            <button type="submit">ارسال</button>
-        </form>
-        <p id="message"></p>
+                <label>شماره دانشجویی:</label>
+                <input type="text" name="studentID" required><br>
+            
+                <label>شماره تماس:</label>
+                <input type="text" name="phone" required><br>
+            
+                <label>مقطع تحصیلی:</label>
+                <select name="degree" required>
+                    <option value="کارشناسی">کارشناسی</option>
+                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+                </select><br>
+            
+                <label>بارگذاری اثر:</label>
+                <input type="file" id="fileUpload" required><br>
+            
+                <button type="submit">ارسال</button>
+            </form>
+            
+            <script>
+            document.getElementById("registerForm").addEventListener("submit", async function(event) {
+                event.preventDefault();
+            
+                let formData = new FormData(this);
+                let file = document.getElementById("fileUpload").files[0];
+            
+                if (file) {
+                    let uploadUrl = "YOUR_GOOGLE_DRIVE_UPLOAD_URL"; // لینک API گوگل درایو
+                    let fileData = new FormData();
+                    fileData.append("file", file);
+            
+                    let uploadResponse = await fetch(uploadUrl, { method: "POST", body: fileData });
+                    let uploadResult = await uploadResponse.json();
+            
+                    if (uploadResult.fileUrl) {
+                        formData.append("fileUrl", uploadResult.fileUrl);
+                    }
+                }
+            
+                let googleScriptUrl = "YOUR_GOOGLE_SHEET_SCRIPT_URL"; // لینک اسکریپت گوگل شیت
+                await fetch(googleScriptUrl, { method: "POST", body: formData });
+                alert("اطلاعات شما ثبت شد!");
+            });
+            </script>    
     </main>
 
     <script src="script.js"></script>
