@@ -25,9 +25,11 @@
     </header>
     <br>
     <p class="center">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود💡</p>
-    <p class="center">دانشجویان دختر درحال تحصیل مجاز به شرکت در این رویداد می‌باشند💡</p>
+    <p class="center">دختران دانشجو درحال تحصیل مجاز به شرکت در این رویداد می‌باشند💡</p>
     <p class="center">هر شرکت کننده در هرمحور 1 اثر میتواند ارسال کند💡</p>
-    <p class="center">فایل ارسالی باید حاوی عکس کارت دانشجویی/💡</p>
+    <p class="center">شرکت کنندگان باید تصویر کارت دانشجویی خود را ارسال کنند/💡</p>
+    <p class="center">نقض هرکدام از قوانین رویداد باعث رد شدن اثرشما می‌شود/💡</p>
+
 
 
 
@@ -48,13 +50,67 @@
                 <label>مقطع تحصیلی:</label>
                 <select name="degree" required>
                     <option value="کارشناسی">کارشناسی</option>
-                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
+                </select><br>
+                <label>رشته تحصیلی:</label>
+                <select name="fieldOfStudy" required>
+                <option value="علوم قرآن و حدیث">علوم قرآن و حدیث</option>
+                <option value="علوم معارف">علوم معارف</option>
+                <option value="کلام اسلامی">کلام اسلامی</option>
+                <option value="الهیات و معارف اسلامی">الهیات و معارف اسلامی</option>
+                <option value="فقه وحقوق اسلامی">فقه وحقوق اسلامی</option>
+                <option value="تفسیر وعلوم قرآن">تفسیر وعلوم قرآن</option>
+                <option value="علوم حدیث">علوم حدیث</option>
+                <option value="نهج البلاغه">نهج البلاغه</option>
+                
                 </select><br>
             
-                <label>بارگذاری اثر:</label>
-                <input type="file" id="fileUpload" required><br>
-            
-                <button type="submit">ارسال</button>
+                <form id="uploadForm">
+                    <label>بارگذاری اثر نوآوری در تدریس:</label>
+                    <input type="file" id="innovationUpload"><br>
+                
+                    <label>بارگذاری اثر اجرای تدریس:</label>
+                    <input type="file" id="executionUpload"><br>
+                
+                    <button type="submit">ارسال</button>
+                </form>
+                
+                <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px;">
+                    ✅ فایل‌ها با موفقیت ارسال شدند!
+                </div>
+                
+                <script>
+                document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+                    event.preventDefault();
+                
+                    let innovationFile = document.getElementById("innovationUpload").files[0];
+                    let executionFile = document.getElementById("executionUpload").files[0];
+                
+                    if (!innovationFile && !executionFile) {
+                        alert("لطفاً حداقل یک فایل بارگذاری کنید.");
+                        return;
+                    }
+                
+                    let googleScriptUrlInnovation = "YOUR_GOOGLE_DRIVE_UPLOAD_URL_FOR_INNOVATION";
+                    let googleScriptUrlExecution = "YOUR_GOOGLE_DRIVE_UPLOAD_URL_FOR_EXECUTION";
+                
+                    if (innovationFile) {
+                        let formData = new FormData();
+                        formData.append("file", innovationFile);
+                        await fetch(googleScriptUrlInnovation, { method: "POST", body: formData });
+                    }
+                
+                    if (executionFile) {
+                        let formData = new FormData();
+                        formData.append("file", executionFile);
+                        await fetch(googleScriptUrlExecution, { method: "POST", body: formData });
+                    }
+                
+                    // مخفی کردن فرم و نمایش پیام موفقیت
+                    document.getElementById("uploadForm").style.display = "none";
+                    document.getElementById("successMessage").style.display = "block";
+                });
+                </script>
             </form>
             
             <script>
