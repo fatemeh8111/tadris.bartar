@@ -27,7 +27,7 @@ header {
 /* استایل منو */
 nav {
     background: #0b1d3100;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
     font-family: 'B Nazanin', sans-serif;
 }
@@ -468,4 +468,14 @@ nav ul li a {
     .menu-toggle {
         display: block;
     }
+}
+.center {
+    text-align: center;
+}
+.center {
+    text-align: center; /* وسط‌چین شدن متن */
+    font-size: 20px; /* تغییر اندازه متن */
+    font-family: 'B Titr', Tahoma, sans-serif; /* تغییر فونت */
+    font-weight: bold; /* ضخیم کردن متن */
+    color: #140050; /* تغییر رنگ متن */
 }
