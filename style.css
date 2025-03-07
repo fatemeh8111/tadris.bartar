@@ -24,48 +24,61 @@ header {
     font-family: 'Baran', sans-serif;
 }
 
-/* استایل منو */
 nav {
-    background: #0b1d3100;
-    padding: 1px;
-    text-align: center;
-    font-family: 'B Nazanin', sans-serif;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu {
+    list-style: none;
     padding: 0;
-    display: flex; /* نمایش آیتم‌ها به‌صورت افقی */
-    justify-content: center; /* وسط‌چین کردن منو */
+    display: flex;
+    justify-content: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+#menu li {
+    margin: 0 10px;
 }
 
-nav ul li a {
+#menu li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
-    display: block;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
+/* تنظیمات برای موبایل */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+    
+    #menu li {
+        margin: 10px 0;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    #menu.show {
+        display: flex;
+    }
 }
 
 /* تنظیمات محتوای صفحه */
