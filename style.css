@@ -488,7 +488,7 @@ form {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -518,7 +518,7 @@ button {
     border: none;
     padding: 12px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
@@ -532,7 +532,7 @@ button:hover {
     font-weight: bold; /* ضخامت متن */
     color: #033f40;
     text-align: center;
-    background-color: #cdf3ec; /* رنگ پس‌زمینه */
+    background-color: #e1f6f2; /* رنگ پس‌زمینه */
     padding: 10px;
     border-radius: 5px; /* گرد کردن گوشه‌ها */
 }
