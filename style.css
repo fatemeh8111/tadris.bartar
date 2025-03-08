@@ -526,3 +526,13 @@ button {
 button:hover {
     background: #0056b3;
 }
+.custom-text {
+    font-family: 'b nazanin', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* ضخامت متن */
+    color: #033f40;
+    text-align: center;
+    background-color: #cdf3ec; /* رنگ پس‌زمینه */
+    padding: 10px;
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+}
