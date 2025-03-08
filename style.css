@@ -536,3 +536,13 @@ button:hover {
     padding: 10px;
     border-radius: 5px; /* گرد کردن گوشه‌ها */
 }
+.custo-text {
+    font-family: 'b nazanin', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* ضخامت متن */
+    color: #c0160d;
+    text-align: center;
+    background-color: #e1f6f2; /* رنگ پس‌زمینه */
+    padding: 10px;
+    border-radius: 5px; /* گرد کردن گوشه‌ها */
+}
