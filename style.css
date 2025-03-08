@@ -138,7 +138,7 @@ footer {
     text-align: center; /* وسط‌چین کردن متن */
     display: block;
     margin: 20px auto; /* ایجاد فاصله از بالا و مرکز چین کردن */
-    font-size: 22px; /* تنظیم اندازه فونت */
+    font-size: 18px; /* تنظیم اندازه فونت */
     direction: rtl; /* تنظیم جهت متن برای فارسی */
     
 }
@@ -146,7 +146,7 @@ footer {
     text-align: center; /* وسط‌چین کردن متن */
     display: block;
     margin: 20px auto; /* ایجاد فاصله از بالا و پایین و قرار دادن در مرکز */
-    font-size: 22px; /* اندازه فونت */
+    font-size: 18px; /* اندازه فونت */
     direction: rtl; /* راست‌چین کردن متن */
     max-width: 80%; /* عرض حداکثری برای خوانایی بهتر */
 }
