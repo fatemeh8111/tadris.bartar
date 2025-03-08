@@ -225,7 +225,14 @@ nav ul li {
     background-color: #218838;
 }
 .main-text {
-  
+    text-align: center;
+    margin: 30px auto;
+    width: 90%;
+    padding: 20px; /* ایجاد فاصله داخلی برای زیباتر شدن */
+    border: 2px solid #007bff; /* حاشیه آبی */
+    border-radius: 10px; /* گرد کردن گوشه‌ها */
+    background-color: #f8f9fa; /* پس‌زمینه ملایم */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
 }
 @keyframes reveal {
     from {
