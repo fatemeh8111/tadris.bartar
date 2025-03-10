@@ -7,6 +7,7 @@
 
 body, html {
     height: 100%;
+    background: #dfebeb;
     font-family: 'B Nazanin', sans-serif;
     direction: rtl;
     display: flex;
@@ -105,7 +106,7 @@ main {
 
 /* استایل فوتر */
 footer {
-    background-color: #09716a; /* رنگ سبز */
+    background-color: #1b9aa5; /* رنگ سبز */
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -152,7 +153,7 @@ footer {
 }
 /* استایل هدر */
 header {
-    background-color: #09716a;
+    background-color: #1b9aa5;
     color: white;
     padding: 15px 0;
     text-align: center;
