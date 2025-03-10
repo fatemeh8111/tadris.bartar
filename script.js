@@ -68,4 +68,4 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         alert("مشکلی پیش آمد، دوباره تلاش کنید.");
     });
 });
-<iframe src="https://docs.google.com/forms/d/e/https://docs.google.com/forms/d/e/1FAIpQLSf3bCdS7uyclLqj_OoUZ-sjkMBQ5k8WLfYXN6OAwyg-8d-LpA/viewform?usp=header/viewform?embedded=true" width="100%" height="800px" frameborder="0" marginheight="0" marginwidth="0">درحال بارگذاری...</iframe>
+
