@@ -13,6 +13,17 @@ body, html {
     display: flex;
     flex-direction: column;
 }
+#centered-image { /* اندازه عکس اتحادیه */
+    display: block;
+    margin: auto;
+}
+
+#centered-images { /* ااندازه تصویر دانشگاه */
+    display: block;
+    margin: auto;
+    width: 800px;
+}
+
 
 
 /* استایل هدر */
