@@ -24,7 +24,7 @@
     </header> 
 
     <div class="main-text">
-        <p class="custo-text"><b>رعایت قوانین الزامی است</b></p>
+        <p class="custom-text"><b>رعایت قوانین الزامی است</b></p>
         <p class="custom-text">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود.</p>
         <p class="custom-text">دانشجویان درحال تحصیل مجاز به شرکت در این رویداد می‌باشند.</p>
         <p class="custom-text">هر شرکت‌کننده در هر محور یک اثر می‌تواند ارسال کند.</p>
@@ -35,7 +35,7 @@
     </div>
 
     <main>
-        <form id="uploadForm">
+        <form id="uploadForm" enctype="multipart/form-data">
             <label>نام و نام خانوادگی:</label>
             <input type="text" name="fullName" required><br>
 
@@ -43,19 +43,21 @@
             <input type="text" name="fatherName" required><br>
 
             <label>شماره دانشجویی:</label>
-            <input type="text" name="studentID" required><br>
+            <input type="text" name="studentID" maxlength="10" required><br>
 
             <label>شماره تماس:</label>
-            <input type="text" name="phone" required><br>
+            <input type="text" name="phone" maxlength="11" required><br>
 
             <label>مقطع تحصیلی:</label>
             <select name="degree" required>
+                <option value="">انتخاب کنید...</option>
                 <option value="کارشناسی">کارشناسی</option>
                 <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
             </select><br>
 
             <label>رشته تحصیلی:</label>
             <select name="fieldOfStudy" required>
+                <option value="">انتخاب کنید...</option>
                 <option value="علوم قرآن و حدیث">علوم قرآن و حدیث</option>
                 <option value="علوم معارف">علوم معارف</option>
                 <option value="کلام اسلامی">کلام اسلامی</option>
@@ -67,10 +69,10 @@
             </select><br>
 
             <label>بارگذاری اثر نوآوری در تدریس:</label>
-            <input type="file" name="innovationUpload" id="innovationUpload" required><br>
+            <input type="file" name="innovationUpload" id="innovationUpload" accept="video/*" required><br>
 
             <label>بارگذاری اثر اجرای تدریس:</label>
-            <input type="file" name="executionUpload" id="executionUpload" required><br>
+            <input type="file" name="executionUpload" id="executionUpload" accept="video/*" required><br>
 
             <button type="submit">ارسال</button>
         </form>
@@ -79,6 +81,7 @@
             ✅ فایل‌ها با موفقیت ارسال شدند!
         </div>  
     </main>
+
     <div id="loader" class="loader-container" style="display: none;">
         <div class="loader"></div>
         <p>در حال ارسال فایل‌ها، لطفاً منتظر بمانید...</p>
