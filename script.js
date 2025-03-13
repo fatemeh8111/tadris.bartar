@@ -51,7 +51,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
         formData.append("innovationLink", innovationLink);
         formData.append("executionLink", executionLink);
 
-        let response = await fetch("https://script.google.com/macros/s/AKfycbxAFBgA52hCjpXoviINHbE6KoqTD6hrieNLfFVBKp2P3UGP8oKqC4mN0Zf0ccixgxORxw/exec", {
+        let response = await fetch("https://script.google.com/macros/s/AKfycbz92HrmIHePkW6zMHJlnrucjGnttsJGxLL424ryIUGATXppDGyuVfueFdY0cjlFiBNHOw/exec", {
             method: "POST",
             body: formData
         });
