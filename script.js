@@ -15,6 +15,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     // نمایش لودر
     document.getElementById("loader").style.display = "block";
 
+
     try {
         let innovationLink = await uploadFileToDrive(innovationFile);
         let executionLink = await uploadFileToDrive(executionFile);
@@ -82,5 +83,13 @@ async function uploadFileToDrive(file) {
     } catch (error) {
         console.error("خطا در آپلود فایل:", error);
         return null;
+    }
+}
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
     }
 }
