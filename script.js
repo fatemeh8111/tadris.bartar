@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector(".butterfly-container");
+    if (!container) return; // اگه عنصر وجود نداشت، ادامه نده
+
     const numButterflies = 15; // تعداد پروانه‌ها
 
     for (let i = 0; i < numButterflies; i++) {
@@ -32,18 +34,20 @@ document.addEventListener("DOMContentLoaded", function() {
         butterfly.classList.add("butterfly");
 
         let randomX = Math.random() * window.innerWidth; // موقعیت تصادفی
-        let randomY = Math.random() * window.innerHeight; // شروع از یک ارتفاع تصادفی
+        let randomY = Math.random() * window.innerHeight; // ارتفاع تصادفی
         let randomSize = Math.random() * 40 + 30; // سایز بین 30 تا 70 پیکسل
         let randomDelay = Math.random() * 5; // تاخیر تصادفی
 
-        butterfly.style.left = `${randomX}px`;
-        butterfly.style.bottom = `${randomY}px`; // از یه جای تصادفی بالا میاد
-        butterfly.style.width = `${randomSize}px`;
-        butterfly.style.animationDelay = `${randomDelay}s`;
+        butterfly.style.left = randomX + "px";
+        butterfly.style.bottom = randomY + "px";
+        butterfly.style.width = randomSize + "px";
+        butterfly.style.animationDelay = randomDelay + "s";
 
         container.appendChild(butterfly);
     }
 });
+
+// 📌 آپلود فایل و نمایش لودر
 document.getElementById("uploadForm").addEventListener("submit", async function (event) {
     event.preventDefault(); // جلوگیری از ارسال فرم به‌صورت پیش‌فرض
 
@@ -51,15 +55,20 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     let innovationFile = document.getElementById("innovationUpload").files[0];
     let executionFile = document.getElementById("executionUpload").files[0];
 
-    // نمایش لودر هنگام ارسال
+    if (!innovationFile || !executionFile) {
+        alert("لطفاً هر دو فایل را انتخاب کنید.");
+        return;
+    }
+
+    // نمایش لودر
     document.getElementById("loader").style.display = "block";
 
     try {
-        // ابتدا فایل‌ها را در گوگل درایو آپلود کن
+        // آپلود فایل‌ها
         let innovationLink = await uploadFileToDrive(innovationFile);
         let executionLink = await uploadFileToDrive(executionFile);
 
-        // حالا اطلاعات را همراه با لینک فایل‌ها به گوگل شیت بفرست
+        // ارسال اطلاعات به گوگل شیت
         formData.append("innovationLink", innovationLink);
         formData.append("executionLink", executionLink);
 
@@ -79,12 +88,12 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
         console.error("خطا:", error);
         alert("مشکلی در ارسال داده‌ها پیش آمد.");
     } finally {
-        // مخفی کردن لودر بعد از اتمام ارسال
+        // مخفی کردن لودر
         document.getElementById("loader").style.display = "none";
     }
 });
 
-// تابع آپلود فایل به گوگل درایو
+// 📌 تابع آپلود به گوگل درایو
 async function uploadFileToDrive(file) {
     let formData = new FormData();
     formData.append("file", file);
