@@ -21,130 +21,69 @@
                 <li><a href="about.html">درباره ما</a></li>
             </ul>
         </nav>
-        </nav>
-    </header>
-<body> 
-    <div class="main-text">
-    <p class="custo-text"> <b>رعایت قوانین الزامی است</b></p>
-    <p class="custom-text">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود.</p>
-    <p class="custom-text"> دانشجویان درحال تحصیل مجاز به شرکت در این رویداد می‌باشند.</p>
-    <p class="custom-text">هر شرکت کننده در هرمحور 1 اثر میتواند ارسال کند.</p>
-    <p class="custom-text">ساختار تدریس باید علمی و منسجم باشد.</p>
-    <p class="custom-text">ویدئو تدریس در حالت افقی و بین 3 تا 7 دقیقه باشد.</p>
-    <p class="custom-text">  استفاده از اسلاید، وایت‌بورد، محتوای چندرسانه‌ای و... مجاز است. </p>
-    <p class="custom-text"> <b> در صورت تخلف از هر یک از مقررات رویداد، ارائه شما از روند ارزیابی خارج خواهد شد.</b></p>
-</body>
+    </header> 
 
+    <div class="main-text">
+        <p class="custo-text"><b>رعایت قوانین الزامی است</b></p>
+        <p class="custom-text">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود.</p>
+        <p class="custom-text">دانشجویان درحال تحصیل مجاز به شرکت در این رویداد می‌باشند.</p>
+        <p class="custom-text">هر شرکت‌کننده در هر محور یک اثر می‌تواند ارسال کند.</p>
+        <p class="custom-text">ساختار تدریس باید علمی و منسجم باشد.</p>
+        <p class="custom-text">ویدئو تدریس در حالت افقی و بین 3 تا 7 دقیقه باشد.</p>
+        <p class="custom-text">استفاده از اسلاید، وایت‌بورد، محتوای چندرسانه‌ای و... مجاز است.</p>
+        <p class="custom-text"><b>در صورت تخلف از هر یک از مقررات رویداد، ارائه شما از روند ارزیابی خارج خواهد شد.</b></p>
+    </div>
 
     <main>
         <form id="uploadForm">
-                <label>نام و نام خانوادگی:</label>
-                <input type="text" name="fullName" required><br>
-            
-                <label>نام پدر:</label>
-                <input type="text" name="fatherName" required><br>
-            
-                <label>شماره دانشجویی:</label>
-                <input type="text" name="studentID" required><br>
-            
-                <label>شماره تماس:</label>
-                <input type="text" name="phone" required><br>
-            
-                <label>مقطع تحصیلی:</label>
-                <select name="degree" required>
-                    <option value="کارشناسی">کارشناسی</option>
-                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
-                </select><br>
-                <label>رشته تحصیلی:</label>
-                <select name="fieldOfStudy" required>
+            <label>نام و نام خانوادگی:</label>
+            <input type="text" name="fullName" required><br>
+
+            <label>نام پدر:</label>
+            <input type="text" name="fatherName" required><br>
+
+            <label>شماره دانشجویی:</label>
+            <input type="text" name="studentID" required><br>
+
+            <label>شماره تماس:</label>
+            <input type="text" name="phone" required><br>
+
+            <label>مقطع تحصیلی:</label>
+            <select name="degree" required>
+                <option value="کارشناسی">کارشناسی</option>
+                <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
+            </select><br>
+
+            <label>رشته تحصیلی:</label>
+            <select name="fieldOfStudy" required>
                 <option value="علوم قرآن و حدیث">علوم قرآن و حدیث</option>
                 <option value="علوم معارف">علوم معارف</option>
                 <option value="کلام اسلامی">کلام اسلامی</option>
-                <option value="تفسیر وعلوم قرآن">تفسیر وعلوم قرآن</option>
+                <option value="تفسیر وعلوم قرآن">تفسیر و علوم قرآن</option>
                 <option value="علوم حدیث">علوم حدیث</option>
                 <option value="نهج البلاغه">نهج البلاغه</option>
                 <option value="تفسیر تطبیقی">تفسیر تطبیقی</option>
                 <option value="شیعه شناسی">شیعه شناسی</option>
+            </select><br>
 
-                </select><br>
-            
-                <form id="uploadForm">
-                    <label>بارگذاری اثر نوآوری در تدریس:</label>
-                    <input type="file" id="innovationUpload"><br>
-                
-                    <label>بارگذاری اثر اجرای تدریس:</label>
-                    <input type="file" id="executionUpload"><br>
-                
-                    <button type="submit">ارسال</button>
-                </form>
-                
-                <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px;">
-                    ✅ فایل‌ها با موفقیت ارسال شدند!
-                </div>
-                
-                <script>
-                document.getElementById("uploadForm").addEventListener("submit", async function(event) {
-                    event.preventDefault();
-                
-                    let innovationFile = document.getElementById("innovationUpload").files[0];
-                    let executionFile = document.getElementById("executionUpload").files[0];
-                
-                    if (!innovationFile && !executionFile) {
-                        alert(" حداقل یک فایل بارگذاری کنید.");
-                        return;
-                    }
-                
-                    let googleScriptUrlInnovation = "https://drive.google.com/drive/folders/16ZB4UqSM_c4_kaZbsNQmfUWRTJt0HS5F";
-                    let googleScriptUrlExecution = "https://drive.google.com/drive/folders/1G3k1mW0TV86zzpmeI9Xq3Ov0DgnGKXto";
-                
-                    if (innovationFile) {
-                        let formData = new FormData();
-                        formData.append("file", innovationFile);
-                        await fetch(googleScriptUrlInnovation, { method: "POST", body: formData });
-                    }
-                
-                    if (executionFile) {
-                        let formData = new FormData();
-                        formData.append("file", executionFile);
-                        await fetch(googleScriptUrlExecution, { method: "POST", body: formData });
-                    }
-                
-                    // مخفی کردن فرم و نمایش پیام موفقیت
-                    document.getElementById("uploadForm").style.display = "none";
-                    document.getElementById("successMessage").style.display = "block";
-                });
-                </script>
-            </form>
-            
-            <script>
-            document.getElementById("registerForm").addEventListener("submit", async function(event) {
-                event.preventDefault();
-            
-                let formData = new FormData(this);
-                let file = document.getElementById("fileUpload").files[0];
-            
-                if (file) {
-                    let uploadUrl = "YOUR_GOOGLE_DRIVE_UPLOAD_URL"; // لینک API گوگل درایو
-                    let fileData = new FormData();
-                    fileData.append("file", file);
-            
-                    let uploadResponse = await fetch(uploadUrl, { method: "POST", body: fileData });
-                    let uploadResult = await uploadResponse.json();
-            
-                    if (uploadResult.fileUrl) {
-                        formData.append("fileUrl", uploadResult.fileUrl);
-                    }
-                }
-                
-                let googleScriptUrl = "https://script.google.com/macros/s/AKfycbwygrPKqfG0ZO1JsJUyVjolIgS42AsJndm4UH_CPb7OTQ0fEZcltBeejQ0ugUm3U0sg/exec"; // لینک اسکریپت گوگل شیت
-                await fetch(googleScriptUrl, { method: "POST", body: formData });
-                alert("اطلاعات شما ثبت شد!");
-            });
-            
-            </script>    
+            <label>بارگذاری اثر نوآوری در تدریس:</label>
+            <input type="file" name="innovationUpload" id="innovationUpload" required><br>
+
+            <label>بارگذاری اثر اجرای تدریس:</label>
+            <input type="file" name="executionUpload" id="executionUpload" required><br>
+
+            <button type="submit">ارسال</button>
+        </form>
+
+        <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px;">
+            ✅ فایل‌ها با موفقیت ارسال شدند!
+        </div>  
     </main>
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="loader"></div>
+        <p>در حال ارسال فایل‌ها، لطفاً منتظر بمانید...</p>
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>
