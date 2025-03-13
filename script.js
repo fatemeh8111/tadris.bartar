@@ -6,7 +6,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     let executionFile = document.getElementById("executionUpload").files[0];
 
     // فرمت‌های مجاز
-    let allowedFormats = ["pdf", "mp3", "mp4", "png"];
+    let allowedFormats = ["pdf", "mp3", "mp4", "png","word","jpg"];
 
     // بررسی نوع و حجم فایل‌ها
     if (!validateFile(innovationFile, allowedFormats)) return;
