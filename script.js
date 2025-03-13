@@ -51,7 +51,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
         formData.append("innovationLink", innovationLink);
         formData.append("executionLink", executionLink);
 
-        let response = await fetch("https://docs.google.com/spreadsheets/d/1IeF8pFZ2g5Tq9HqqOaaZHb0uY_ile8aGr42K9bxK48E/edit?usp=drivesdk", {
+        let response = await fetch("https://script.google.com/macros/s/AKfycbxAFBgA52hCjpXoviINHbE6KoqTD6hrieNLfFVBKp2P3UGP8oKqC4mN0Zf0ccixgxORxw/exec", {
             method: "POST",
             body: formData
         });
