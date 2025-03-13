@@ -14,6 +14,24 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
         alert("حجم فایل اجرای تدریس بیش از ۳۰ مگابایت است!");
         return;
     }
+    function validateFile(file) {
+        if (!file) return true; // اگر فایلی انتخاب نشده باشد، نیازی به بررسی نیست
+    
+        let allowedFormats = ["pdf", "mp3", "mp4", "png"]; // فرمت‌های مجاز
+        let fileExtension = file.name.split('.').pop().toLowerCase(); // استخراج پسوند فایل
+    
+        if (!allowedFormats.includes(fileExtension)) {
+            alert("فقط فرمت‌های PDF، MP3، MP4 و PNG مجاز هستند!");
+            return false;
+        }
+    
+        if (file.size > 30 * 1024 * 1024) { // محدودیت ۳۰ مگابایت
+            alert("حجم فایل بیش از ۳۰ مگابایت است!");
+            return false;
+        }
+    
+        return true;
+    }
 
     // نمایش لودر
     document.getElementById("loader").style.display = "block";
