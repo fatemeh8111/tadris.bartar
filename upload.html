@@ -3,70 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آپلود فایل</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        #loader {
-            display: none;
-            margin: 10px auto;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #3498db;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        #successMessage {
-            display: none;
-            color: green;
-            font-weight: bold;
-        }
-        #menu {
-            display: none;
-            background: #f4f4f4;
-            padding: 10px;
-        }
-        .file-input {
-            margin: 10px 0;
-        }
-    </style>
+    <title>ثبت‌نام و ارسال اثر</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="header">
+            <img src="image/sabtenam.png" alt="تاپی.گراف">
+        </div>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="info.html">معرفی رویداد</a></li>
+                <li><a href="upload.html">ثبت‌ نام و ارسال آثار</a></li>
+                <li><a href="judges.html">هیئت داوران</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+            </ul>
+        </nav>
+    </header> 
 
-    <h2>فرم آپلود فایل</h2>
+    <div class="main-text">
+        <p class="custo-text"><b>رعایت قوانین الزامی است</b></p>
+        <p class="custom-text">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود.</p>
+        <p class="custom-text">دانشجویان درحال تحصیل مجاز به شرکت در این رویداد می‌باشند.</p>
+        <p class="custom-text">هر شرکت‌کننده در هر محور یک اثر می‌تواند ارسال کند.</p>
+        <p class="custom-text">ساختار تدریس باید علمی و منسجم باشد.</p>
+        <p class="custom-text">ویدئو تدریس در حالت افقی و بین 3 تا 7 دقیقه باشد.</p>
+        <p class="custom-text">استفاده از اسلاید، وایت‌بورد، محتوای چندرسانه‌ای و... مجاز است.</p>
+        <p class="custom-text"><b>در صورت تخلف از هر یک از مقررات رویداد، ارائه شما از روند ارزیابی خارج خواهد شد.</b></p>
+    </div>
 
-    <!-- فرم آپلود -->
-    <form id="uploadForm">
-        <label>فایل نوآوری:</label>
-        <input type="file" id="innovationUpload" class="file-input" required>
+    <main>
+        <form id="uploadForm">
+            <label>نام و نام خانوادگی:</label>
+            <input type="text" name="fullName" required><br>
 
-        <label>فایل اجرایی:</label>
-        <input type="file" id="executionUpload" class="file-input" required>
+            <label>نام پدر:</label>
+            <input type="text" name="fatherName" required><br>
 
-        <button type="submit">ارسال فایل</button>
-    </form>
+            <label>شماره دانشجویی:</label>
+            <input type="text" name="studentID" required><br>
 
-    <!-- لودر هنگام ارسال داده -->
-    <div id="loader"></div>
+            <label>شماره تماس:</label>
+            <input type="text" name="phone" required><br>
 
-    <!-- پیام موفقیت -->
-    <p id="successMessage">✅ اثر شما با موفقیت ثبت شد!</p>
+            <label>مقطع تحصیلی:</label>
+            <select name="degree" required>
+                <option value="کارشناسی">کارشناسی</option>
+                <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
+            </select><br>
 
-    <!-- دکمه و منوی موبایلی -->
-    <button onclick="toggleMenu()">نمایش منو</button>
-    <div id="menu">
-        <ul>
-            <li><a href="#">صفحه اصلی</a></li>
-            <li><a href="#">تماس با ما</a></li>
-            <li><a href="#">درباره ما</a></li>
-        </ul>
+            <label>رشته تحصیلی:</label>
+            <select name="fieldOfStudy" required>
+                <option value="علوم قرآن و حدیث">علوم قرآن و حدیث</option>
+                <option value="علوم معارف">علوم معارف</option>
+                <option value="کلام اسلامی">کلام اسلامی</option>
+                <option value="تفسیر وعلوم قرآن">تفسیر و علوم قرآن</option>
+                <option value="علوم حدیث">علوم حدیث</option>
+                <option value="نهج البلاغه">نهج البلاغه</option>
+                <option value="تفسیر تطبیقی">تفسیر تطبیقی</option>
+                <option value="شیعه شناسی">شیعه شناسی</option>
+            </select><br>
+
+            <label>بارگذاری اثر نوآوری در تدریس:</label>
+            <input type="file" name="innovationUpload" id="innovationUpload" required><br>
+
+            <label>بارگذاری اثر اجرای تدریس:</label>
+            <input type="file" name="executionUpload" id="executionUpload" required><br>
+
+            <button type="submit">ارسال</button>
+        </form>
+
+        <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px;">
+            ✅ فایل‌ها با موفقیت ارسال شدند!
+        </div>  
+    </main>
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="loader"></div>
+        <p>در حال ارسال فایل‌ها، لطفاً منتظر بمانید...</p>
     </div>
 
     <script src="script.js"></script>
