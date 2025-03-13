@@ -5,33 +5,12 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     let innovationFile = document.getElementById("innovationUpload").files[0];
     let executionFile = document.getElementById("executionUpload").files[0];
 
-    // بررسی حجم فایل‌ها (حداکثر ۳۰ مگابایت)
-    if (innovationFile && innovationFile.size > 30 * 1024 * 1024) {
-        alert("حجم فایل نوآوری بیش از ۳۰ مگابایت است!");
-        return;
-    }
-    if (executionFile && executionFile.size > 30 * 1024 * 1024) {
-        alert("حجم فایل اجرای تدریس بیش از ۳۰ مگابایت است!");
-        return;
-    }
-    function validateFile(file) {
-        if (!file) return true; // اگر فایلی انتخاب نشده باشد، نیازی به بررسی نیست
-    
-        let allowedFormats = ["pdf", "mp3", "mp4", "png"]; // فرمت‌های مجاز
-        let fileExtension = file.name.split('.').pop().toLowerCase(); // استخراج پسوند فایل
-    
-        if (!allowedFormats.includes(fileExtension)) {
-            alert("فقط فرمت‌های PDF، MP3، MP4 و PNG مجاز هستند!");
-            return false;
-        }
-    
-        if (file.size > 30 * 1024 * 1024) { // محدودیت ۳۰ مگابایت
-            alert("حجم فایل بیش از ۳۰ مگابایت است!");
-            return false;
-        }
-    
-        return true;
-    }
+    // فرمت‌های مجاز
+    let allowedFormats = ["pdf", "mp3", "mp4", "png"];
+
+    // بررسی نوع و حجم فایل‌ها
+    if (!validateFile(innovationFile, allowedFormats)) return;
+    if (!validateFile(executionFile, allowedFormats)) return;
 
     // نمایش لودر
     document.getElementById("loader").style.display = "block";
@@ -67,9 +46,27 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     }
 });
 
+// تابع بررسی فرمت و حجم فایل
+function validateFile(file, allowedFormats) {
+    if (!file) return true; // اگر فایلی انتخاب نشده بود، ادامه بده
+
+    let fileExtension = file.name.split('.').pop().toLowerCase(); // استخراج پسوند فایل
+    if (!allowedFormats.includes(fileExtension)) {
+        alert("فقط فرمت‌های PDF، MP3، MP4 و PNG مجاز هستند!");
+        return false;
+    }
+
+    if (file.size > 30 * 1024 * 1024) { // محدودیت 30 مگابایت
+        alert("حجم فایل بیش از ۳۰ مگابایت است!");
+        return false;
+    }
+
+    return true;
+}
+
 // تابع آپلود فایل به گوگل درایو
 async function uploadFileToDrive(file) {
-    if (!file) return null; // اگر فایلی انتخاب نشده بود
+    if (!file) return null;
 
     let formData = new FormData();
     formData.append("file", file);
@@ -81,15 +78,9 @@ async function uploadFileToDrive(file) {
         });
 
         let data = await response.json();
-        return data.fileUrl || null; // در صورت موفقیت لینک فایل را برمی‌گرداند
+        return data.fileUrl || null;
     } catch (error) {
         console.error("خطا در آپلود فایل:", error);
         return null;
     }
-}
-
-// تابع نمایش یا مخفی کردن منو
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
