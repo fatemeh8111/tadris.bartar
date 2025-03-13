@@ -77,7 +77,7 @@ async function uploadFileToDrive(file) {
     let formData = new FormData();
     formData.append("file", file);
     
-    let response = await fetch("https://drive.google.com/drive/folders/16ZB4UqSM_c4_kaZbsNQmfUWRTJt0HS5F", {
+    let response = await fetch("https://script.google.com/macros/s/AKfycbxoRMkshXcjlTU-18BWSwpvJc8yYaA4-gzMpzp5nXQnT2ltnSKtgV7gHPVAuSmNqb6nxA/exec", {
         method: "POST",
         body: formData
     });
