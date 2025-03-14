@@ -118,7 +118,7 @@ main {
 /* استایل فوتر */
 footer {
     background-color: #1b9aa5; /* رنگ سبز */
-    color: white;
+    color: rgb(250, 240, 240);
     text-align: center;
     padding: 15px 0;
     font-size: 14px;
@@ -623,8 +623,8 @@ button:hover {
 }
 
 .eitaa-button:hover {
-    background-color: #ffffff; /* سفید میشه */
-    color: #0088cc; /* متن آبی میشه */
+    background-color: #f67f23; /* سفید میشه */
+    color: #f8fafb; /* متن آبی میشه */
     border: 3px solid #0088cc;
 }
 .bakhsh {  display: flex;
@@ -637,7 +637,7 @@ button:hover {
 }
 
 h2 {
-    color: #333;
+    color: #13203c;
     transition: color 0.3s ease;
 }
 
@@ -649,3 +649,25 @@ p {
     font-size: 18px;
     color: #555;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #6a0dad;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
