@@ -596,4 +596,56 @@ button:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+@font-face {
+    font-family: 'BTitr';
+    src: url('BTitr.ttf') format('truetype'); /* مطمئن شو فایل فونت رو داری */
+}
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* وسط‌چین در کل صفحه */
+}
+
+.eitaa-button {
+    display: inline-block;
+    background-color: #0088cc;  /* رنگ آبی ایتا */
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: 'BTitr', sans-serif;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 3px solid transparent;
+    text-align: center;
+}
+
+.eitaa-button:hover {
+    background-color: #ffffff; /* سفید میشه */
+    color: #0088cc; /* متن آبی میشه */
+    border: 3px solid #0088cc;
+}
+.bakhsh {  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* کل ارتفاع صفحه را پوشش می‌دهد */
+    text-align: center;
+    font-family: 'B Titr', sans-serif;
+}
+
+h2 {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #007bff;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
