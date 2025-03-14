@@ -27,7 +27,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
         formData.append("innovationLink", innovationLink);
         formData.append("executionLink", executionLink);
 
-        let response = await fetch("https://script.google.com/macros/s/AKfycbw9L6CR1lU33tX3-qOhiRsibwR0X8d5WkfbLBdCgELnNFuDZgjOKtI_h_N2j8WBecSPEg/exec", {
+        let response = await fetch("https://script.google.com/macros/s/AKfycbzbeSpox3ufj1g_qOGtphzNBB9LBwRscufSni3E0n4kgwTTzFi9GimGwVKZHYmRKOS5iw/exec", {
             method: "POST",
             body: formData
         });
@@ -73,7 +73,7 @@ async function uploadFileToDrive(file) {
     formData.append("file", file);
 
     try {
-        let response = await fetch("https://script.google.com/macros/s/AKfycbxoRMkshXcjlTU-18BWSwpvJc8yYaA4-gzMpzp5nXQnT2ltnSKtgV7gHPVAuSmNqb6nxA/exec", {
+        let response = await fetch("https://script.google.com/macros/s/AKfycbzbeSpox3ufj1g_qOGtphzNBB9LBwRscufSni3E0n4kgwTTzFi9GimGwVKZHYmRKOS5iw/exec", {
             method: "POST",
             body: formData
         });
