@@ -23,7 +23,7 @@
         </nav>
     </header> 
 
-    <div class="main-text">
+    <div>
         <p class="custo-text"><b>رعایت قوانین الزامی است</b></p>
         <p class="custom-text">قبل از ثبت نام شیوه نامه اجرایی مطالعه شود.</p>
         <p class="custom-text">دانشجویان درحال تحصیل مجاز به شرکت در این رویداد می‌باشند.</p>
@@ -32,91 +32,39 @@
         <p class="custom-text">ویدئو تدریس در حالت افقی و بین 3 تا 7 دقیقه باشد.</p>
         <p class="custom-text">استفاده از اسلاید، وایت‌بورد، محتوای چندرسانه‌ای و... مجاز است.</p>
         <p class="custom-text"><b>فرمت‌های مجاز برای بارگذاری: pdf، mp3، mp4، png، word، jpg. سایر فرمت‌ها پذیرفته نمی‌شود.</b></p>
+        <p class="custom-text"><b>فایل های ارسالی نباید بیشتر از 40 مگابایت باشند.</b></p>
         <p class="custom-text"><b>در صورت بروز هرگونه مشکل در فرآیند مسابقه، لطفاً به آیدی @anjoman_hmu در ایتا یا تلگرام پیام دهید.</b></p>
         <p class="custom-text"><b>در صورت تخلف از هر یک از مقررات رویداد، ارائه شما از روند ارزیابی خارج خواهد شد.</b></p>
     
     </div>
     <div class="bakhsh"> <p><b>📌 لطفاً بخش مورد نظر خود را انتخاب کنید</b> </p>
-    <p>برای ارسال فایل، روی گزینه مربوطه کلیک کنید و از طریق ایتا اقدام نمایید.</p> </div>
-    
+    <p>برای ارسال فایل واطلاعات مورد نیاز، روی گزینه مربوطه کلیک کنید و از طریق ایتا اقدام نمایید.</p> </div>
+    <p class="custom-text"><b>اطلاعات موردنیاز: نام و نام خانوادگی/عکس کارت دانشجویی/شماره تماس/رشته و مقطع تحصیلی/فایل مسابقه.</b></p>
 
     <div class="button-container">
-        <a href="https://eitaa.com/msg/@SoltanAli_20" target="_blank" class="eitaa-button">  
+        <a href="https://eitaa.com/SoltanAli_20" target="_blank" class="eitaa-button">  
             نوآوری درتدریس(دانشجویان کارشناسی) 
         </a>
     </div>
     <br> 
     <div class="button-container">
-        <a href="https://eitaa.com/msg/@fatemeh_yazdian" target="_blank" class="eitaa-button">  
+        <a href="https://eitaa.com/fatemeh_yazdian" target="_blank" class="eitaa-button">  
             اجرای تدریس(دانشجویان کارشناسی)  
         </a>
     </div>
     <br>
 
     <div class="button-container">
-        <a href="https://eitaa.com/msg/@yas418" target="_blank" class="eitaa-button">  
+        <a href="https://eitaa.com/yas418" target="_blank" class="eitaa-button">  
             نوآوری درتدریس(دانشجویان کارشناسی ارشد)  
         </a>
     </div>
     <br>
 
     <div class="button-container">
-        <a href="https://eitaa.com/msg/@faghaei_83" target="_blank" class="eitaa-button">  
+        <a href="https://eitaa.com/faghaei_83" target="_blank" class="eitaa-button">  
             اجرای تدریس(دانشجویان کارشناسی ارشد)  
         </a>
-    </div>
-
-    <main>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <label>نام و نام خانوادگی:</label>
-            <input type="text" name="fullName" required><br>
-
-            <label>نام پدر:</label>
-            <input type="text" name="fatherName" required><br>
-
-            <label>شماره دانشجویی:</label>
-            <input type="text" name="studentID" maxlength="10" required><br>
-
-            <label>شماره تماس:</label>
-            <input type="text" name="phone" maxlength="11" required><br>
-
-            <label>مقطع تحصیلی:</label>
-            <select name="degree" required>
-                <option value="">انتخاب کنید...</option>
-                <option value="کارشناسی">کارشناسی</option>
-                <option value="کارشناسی ارشد">کارشناسی ارشد</option>   
-            </select><br>
-
-            <label>رشته تحصیلی:</label>
-            <select name="fieldOfStudy" required>
-                <option value="">انتخاب کنید...</option>
-                <option value="علوم قرآن و حدیث">علوم قرآن و حدیث</option>
-                <option value="علوم معارف">علوم معارف</option>
-                <option value="کلام اسلامی">کلام اسلامی</option>
-                <option value="تفسیر وعلوم قرآن">تفسیر و علوم قرآن</option>
-                <option value="علوم حدیث">علوم حدیث</option>
-                <option value="نهج البلاغه">نهج البلاغه</option>
-                <option value="تفسیر تطبیقی">تفسیر تطبیقی</option>
-                <option value="شیعه شناسی">شیعه شناسی</option>
-            </select><br>
-
-            <label>بارگذاری اثر نوآوری در تدریس:</label>
-            <input type="file" name="innovationUpload" id="innovationUpload" accept="video/image/pdf/word*" required><br>
-
-            <label>بارگذاری اثر اجرای تدریس:</label>
-            <input type="file" name="executionUpload" id="executionUpload" accept="video/image/pdf/word*" required><br>
-
-            <button type="submit">ارسال</button>
-        </form>
-
-        <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px;">
-            ✅ فایل‌ها با موفقیت ارسال شدند!
-        </div>  
-    </main>
-
-    <div id="loader" class="loader-container" style="display: none;">
-        <div class="loader"></div>
-        <p>در حال ارسال فایل‌ها، لطفاً منتظر بمانید...</p>
     </div>
 
     <script src="script.js"></script>
