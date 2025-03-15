@@ -40,10 +40,10 @@
         <div class="main-text">
             <h2>«به رویداد تدریس برتر خوش آمدید»</h2>
             <br>
-            <p><b>"اولین دوره از مسابقات ملی دانشجویی در حوزه علوم قرآن و حدیث"</b></p>
+            <p><b>«اولین دوره از مسابقات ملی دانشجویی در حوزه علوم قرآن و حدیث»</b></p>
             <div class="container">
-                <div class="box"> نوآوری در تدریس</div>
-                <div class="box">اجرای تدریس</div>
+                <div class="box">تولید محتوای آموزشی</div>
+                <div class="box">ارائه محتوای آموزشی</div>
             </div>
             <br>
             <img src="image/پوستراصلی.jpg" alt="پوستر برنامه " width="500">
@@ -60,6 +60,47 @@
             
             <a href="image/شیوه نامه.pdf" download class="download-btn">📄 دانلود شیوه‌ نامه اجرایی</a>
             <div class="slider-container">
+         <div class="tab-container">
+               <div class="tabs">
+                    <button class="tab-button active" onclick="openTab(event, 'first')">🏆 نفر اول</button>
+                    <button class="tab-button" onclick="openTab(event, 'second')">🥈 نفر دوم</button>
+                     <button class="tab-button" onclick="openTab(event, 'third')">🥉 نفر سوم</button>
+                    </div>
+            
+        <div class="tab-content" id="first">
+               <h2>🏆 نفر اول</h2>
+              <p>🎖 مبلغ ۴ میلیون تومان به همراه هدایای ویژه و منابع علمی</p>
+              <p>📚 معرفی به سامانه آموزشی آرمان برای تدریس دوره‌های آموزشی</p>     
+              </div>
+            
+          <div class="tab-content" id="second" style="display: none;">
+                <h2>🥈 نفر دوم</h2>
+               <p>🎖 مبلغ ۳ میلیون تومان به همراه کمک‌هزینه آموزشی</p>
+                <p>📚 امکان شرکت در دوره‌های ویژه اساتید برتر</p>
+                </div>
+            
+         <div class="tab-content" id="third" style="display: none;">
+                 <h2>🥉 نفر سوم</h2>
+                  <p>🎖 مبلغ ۲ میلیون تومان به همراه هدایای غیرنقدی و آموزشی</p>
+                  <p>📚 دسترسی به منابع علمی و کارگاه‌های آموزشی</p>
+                 </div>
+                </div>
+            
+                <script>
+                    function openTab(event, tabName) {
+                        let i, tabcontent, tabbuttons;
+                        tabcontent = document.getElementsByClassName("tab-content");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tabbuttons = document.getElementsByClassName("tab-button");
+                        for (i = 0; i < tabbuttons.length; i++) {
+                            tabbuttons[i].classList.remove("active");
+                        }
+                        document.getElementById(tabName).style.display = "block";
+                        event.currentTarget.classList.add("active");
+                    }
+                </script>
                 <br>
                 <br>
               <!-- لینک‌های Swiper -->
