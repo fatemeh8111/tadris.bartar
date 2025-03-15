@@ -59,48 +59,81 @@
             <p><b>به میزبانی انجمن علمی علوم قرآن وحدیث دانشگاه حضرت معصومه (سلام الله علیها) </b></p>    
             
             <a href="image/شیوه نامه.pdf" download class="download-btn">📄 دانلود شیوه‌ نامه اجرایی</a>
+            <br>
+            <br>
             <div class="slider-container">
-         <div class="tab-container">
-               <div class="tabs">
-                    <button class="tab-button active" onclick="openTab(event, 'first')">🏆 نفر اول</button>
-                    <button class="tab-button" onclick="openTab(event, 'second')">🥈 نفر دوم</button>
-                     <button class="tab-button" onclick="openTab(event, 'third')">🥉 نفر سوم</button>
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'first')">🏆 نفر اول</button>
+                        <button class="tab-button" onclick="openTab(event, 'second')">🥈 نفر دوم</button>
+                        <button class="tab-button" onclick="openTab(event, 'third')">🥉 نفر سوم</button>
                     </div>
             
-        <div class="tab-content" id="first">
-               <h2>🏆 نفر اول</h2>
-              <p>🎖 مبلغ ۴ میلیون تومان به همراه هدایای ویژه و منابع علمی</p>
-              <p>📚 معرفی به سامانه آموزشی آرمان برای تدریس دوره‌های آموزشی</p>     
-              </div>
+                    <div class="tab-content active" id="first">
+                        <table>
+                            <tr>
+                                <td>🎖 جایزه</td>
+                                <td>مبلغ ۴۰ میلیون ریال به همراه هدایای ویژه و منابع علمی</td>
+                            </tr>
+                            <tr>
+                                <td>📚 فرصت تدریس</td>
+                                <td>معرفی به سامانه آموزشی <a href="https://arman-hmu.ir/" target="_blank">آرمان</a> برای برگزاری دوره‌ها</td>
+                            </tr>
+                        </table>
+                    </div>
             
-          <div class="tab-content" id="second" style="display: none;">
-                <h2>🥈 نفر دوم</h2>
-               <p>🎖 مبلغ ۳ میلیون تومان به همراه کمک‌هزینه آموزشی</p>
-                <p>📚 امکان شرکت در دوره‌های ویژه اساتید برتر</p>
+                    <div class="tab-content" id="second">
+                        <table>
+                            <tr>
+                                <td>🎖 جایزه</td>
+                                <td>مبلغ ۳۰ میلیون ریال به همراه کمک‌هزینه آموزشی</td>
+                            </tr>
+                            <tr>
+                                <td>📚 فرصت ویژه</td>
+                                <td>امکان شرکت در دوره‌های ویژه اساتید برتر</td>
+                            </tr>
+                        </table>
+                    </div>
+            
+                    <div class="tab-content" id="third">
+                        <table>
+                            <tr>
+                                <td>🎖 جایزه</td>
+                                <td>مبلغ ۲۰ میلیون ریال به همراه هدایای غیرنقدی و آموزشی</td>
+                            </tr>
+                            <tr>
+                                <td>📚 دسترسی ویژه</td>
+                                <td>دسترسی به منابع علمی و کارگاه‌های آموزشی</td>
+                            </tr>
+                        </table>
+                    </div>
+            
+                    <!-- سکوی مسابقه -->
+                    <div class="podium">
+                        <div class="second">🥈 نفر دوم</div>
+                        <div class="first">🏆 نفر اول</div>
+                        <div class="third">🥉 نفر سوم</div>
+                    </div>
                 </div>
+            </div>
             
-         <div class="tab-content" id="third" style="display: none;">
-                 <h2>🥉 نفر سوم</h2>
-                  <p>🎖 مبلغ ۲ میلیون تومان به همراه هدایای غیرنقدی و آموزشی</p>
-                  <p>📚 دسترسی به منابع علمی و کارگاه‌های آموزشی</p>
-                 </div>
-                </div>
+            <script>
+                function openTab(event, tabName) {
+                    let tabcontent = document.getElementsByClassName("tab-content");
+                    let tabbuttons = document.getElementsByClassName("tab-button");
             
-                <script>
-                    function openTab(event, tabName) {
-                        let i, tabcontent, tabbuttons;
-                        tabcontent = document.getElementsByClassName("tab-content");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-                        tabbuttons = document.getElementsByClassName("tab-button");
-                        for (i = 0; i < tabbuttons.length; i++) {
-                            tabbuttons[i].classList.remove("active");
-                        }
-                        document.getElementById(tabName).style.display = "block";
-                        event.currentTarget.classList.add("active");
+                    for (let i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].classList.remove("active");
                     }
-                </script>
+            
+                    for (let i = 0; i < tabbuttons.length; i++) {
+                        tabbuttons[i].classList.remove("active");
+                    }
+            
+                    document.getElementById(tabName).classList.add("active");
+                    event.currentTarget.classList.add("active");
+                }
+            </script>
                 <br>
                 <br>
               <!-- لینک‌های Swiper -->
